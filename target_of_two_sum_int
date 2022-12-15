@@ -1,0 +1,15 @@
+# Think an array of integers. Return the indices of two integers, such that if we add them up, want to reach to a specific target. 
+# There is always one unique solution. 
+
+# For an example, suppose the array is like List = [2,9,8,16], and the target sum is 10. Then it will return indices 0 and 2, as List[0] + List[2] = 10.
+
+class Solution(object):
+    def twoSum(self, nums, target):
+        for i in range(len(nums)):
+            for j in range(i + 1, len(nums)):
+                if nums[j] == target - nums[i]:
+                    return [i, j]
+
+nums = [2,9,8,16]
+obj = Solution()
+print(obj.twoSum(nums, 10))
